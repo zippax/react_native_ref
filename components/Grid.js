@@ -13,7 +13,7 @@ export default class Grid extends Component{
         <ScrollView>
           <View style={styles.boxesContainer}>
             <View style={styles.box}>
-              <Image source={require('../images/quraan.jpg')} style={styles.backgroundImage} />
+              <Image source={require('../images/quran.jpg')} style={styles.backgroundImage} />
               <View style={styles.btnTextHolder}>
                 <Text style={styles.btnText}>سور مستحبة</Text>
               </View>
