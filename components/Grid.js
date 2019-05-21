@@ -1,43 +1,43 @@
 import React, { Component } from 'react'
-import { AppRegistry, StyleSheet, Text, View, Dimensions, Image } from 'react-native'
+import { AppRegistry, StyleSheet, Text, View, Dimensions, Image, ScrollView } from 'react-native'
 
 export default class Grid extends Component{
   render() {
     return (
       <View style={styles.container}>
-
         <View style={styles.header}>
           {
             // Header
           }
         </View>
-
-        <View style={styles.boxesContainer}>
-          <View style={styles.box}>
-            <Image source={require('../images/quraan.jpg')} style={styles.backgroundImage} />
-            <View style={styles.btnTextHolder}>
-              <Text style={styles.btnText}>سور مستحبة</Text>
+        <ScrollView>
+          <View style={styles.boxesContainer}>
+            <View style={styles.box}>
+              <Image source={require('../images/quraan.jpg')} style={styles.backgroundImage} />
+              <View style={styles.btnTextHolder}>
+                <Text style={styles.btnText}>سور مستحبة</Text>
+              </View>
+            </View>
+            <View style={styles.box}>
+              <Image source={require('../images/duaa.jpg')} style={styles.backgroundImage} />
+              <View style={styles.btnTextHolder}>
+                <Text style={styles.btnText}>ادعية و زيارات</Text>
+              </View>
+            </View>
+            <View style={styles.box}>
+              <Image source={require('../images/contact.jpg')} style={styles.backgroundImage} />
+              <View style={styles.btnTextHolder}>
+                <Text style={styles.btnText}>تواصل معنا</Text>
+              </View>
+            </View>
+            <View style={styles.box}>
+              <Image source={require('../images/map.jpg')} style={styles.backgroundImage} />
+              <View style={styles.btnTextHolder}>
+                <Text style={styles.btnText}>خارطة المقبرة</Text>
+              </View>
             </View>
           </View>
-          <View style={styles.box}>
-            <Image source={require('../images/duaa.jpg')} style={styles.backgroundImage} />
-            <View style={styles.btnTextHolder}>
-              <Text style={styles.btnText}>ادعية و زيارات</Text>
-            </View>
-          </View>
-          <View style={styles.box}>
-            <Image source={require('../images/contact.jpg')} style={styles.backgroundImage} />
-            <View style={styles.btnTextHolder}>
-              <Text style={styles.btnText}>تواصل معنا</Text>
-            </View>
-          </View>
-          <View style={styles.box}>
-            <Image source={require('../images/map.jpg')} style={styles.backgroundImage} />
-            <View style={styles.btnTextHolder}>
-              <Text style={styles.btnText}>خارطة المقبرة</Text>
-            </View>
-          </View>
-        </View>
+        </ScrollView>
       </View>
     )
   }
