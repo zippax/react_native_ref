@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { AppRegistry, StyleSheet, Text, View, Dimensions } from 'react-native'
+import { AppRegistry, StyleSheet, Text, View, Dimensions, Image } from 'react-native'
 
 export default class Grid extends Component{
   render() {
@@ -14,16 +14,28 @@ export default class Grid extends Component{
 
         <View style={styles.boxesContainer}>
           <View style={styles.box}>
-            <Text>01</Text>
+            <Image source={require('../images/quraan.jpg')} style={styles.backgroundImage} />
+            <View style={styles.btnTextHolder}>
+              <Text style={styles.btnText}>سور مستحبة</Text>
+            </View>
           </View>
           <View style={styles.box}>
-            <Text>02</Text>
+            <Image source={require('../images/duaa.jpg')} style={styles.backgroundImage} />
+            <View style={styles.btnTextHolder}>
+              <Text style={styles.btnText}>ادعية و زيارات</Text>
+            </View>
           </View>
           <View style={styles.box}>
-            <Text>03</Text>
+            <Image source={require('../images/contact.jpg')} style={styles.backgroundImage} />
+            <View style={styles.btnTextHolder}>
+              <Text style={styles.btnText}>تواصل معنا</Text>
+            </View>
           </View>
           <View style={styles.box}>
-            <Text>04</Text>
+            <Image source={require('../images/map.jpg')} style={styles.backgroundImage} />
+            <View style={styles.btnTextHolder}>
+              <Text style={styles.btnText}>خارطة المقبرة</Text>
+            </View>
           </View>
         </View>
       </View>
@@ -51,8 +63,29 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').width / 2 - 100,
     margin: 5,
     backgroundColor: '#eee',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
     borderColor: '#ccc',
+  },
+  backgroundImage:{
+    flex: 1,
+    width: '100%',
+    height: 'auto',
+    resizeMode: 'cover',
+  },
+  btnTextHolder:{
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  },
+  btnText:{
+    backgroundColor: '#fff',
+    padding: 5,
+    paddingLeft: 10,
+    paddingRight: 10
   }
 })
