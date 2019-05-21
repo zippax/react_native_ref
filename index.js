@@ -1,9 +1,15 @@
-/**
- * @format
- */
+import React, {Component} from 'react'
+import { AppRegistry, StyleSheet, Text, View, Dimensions } from 'react-native'
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+import Grid from './components/Grid'
 
-AppRegistry.registerComponent(appName, () => App);
+export default class Home extends Component{
+  render() {
+    return (
+      <Grid />
+    )
+  }
+}
+
+
+AppRegistry.registerComponent('react_native_ref', () => Home)
